@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="letterCss.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Title -->
+        <h2 class="title">Happy Valentines bub-bub!</h2>
+
+        <!-- Pickup Line -->
+        <p class="pickupline">
+            Roses are red,<br>
+            Violets are rare,<br>
+            Your hands on my neck?<br>
+            Now that’s only fair.
+        </p>
+
+        <!-- Rizz Picture -->
+        <div class="rizz-container">
+            <img src="https://i.imgur.com/LyvOLLI.png" 
+                 alt="rizz" class="rizzPic">
+        </div>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/OL_Ocbn0mCs?si=fDKWHrhUNTS53L0d&autoplay=1&loop=1&playlist=OL_Ocbn0mCs" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Bottom Content (Message + Cat GIF) -->
+        <div class="bottom-content">
+            <p>
+Bub, Happy Valentines day. I love you so much, im sorry for the past few days we didn't get to play and spend time together kase naantok ako maaga. idk why it happened di naman ako ganito dati, probably tired lang sa school and stuff. i promise i will make it up, im making this letter or paragraph or message for my short coming, im sorry. im making this as a website para cool lol, dahil wala lang. im sorry, and i love you so much. MHWA XOXO❤️
+            </p>
+
+            <!-- Cat GIF -->
+            <div class="cat-gif">
+                <img src="https://media1.tenor.com/m/WsWej1C3ePYAAAAC/yippee-cat-kitty.gif" alt="Yippee Cat GIF">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Falling Petals -->
+    <script>
+        function createFallingPetal() {
+            const petal = document.createElement("img");
+
+            // Petal Images
+            const petalImages = [
+                "https://i.imgur.com/u98V1hj.png",
+                "https://i.imgur.com/yQkhhVP.png",
+                "https://i.imgur.com/TXTIbgJ.png"
+            ];
+
+            petal.src = petalImages[Math.floor(Math.random() * petalImages.length)];
+            petal.classList.add("falling-petal");
+
+            // Random position and size
+            petal.style.left = Math.random() * window.innerWidth + "px";
+            petal.style.top = "-50px";  
+            petal.style.width = (Math.random() * 30 + 20) + "px";  
+            petal.style.animationDuration = (Math.random() * 5 + 5) + "s";  
+
+            document.body.appendChild(petal);
+
+            // Remove petal after it falls
+            setTimeout(() => {
+                petal.remove();
+            }, 10000);
+        }
+
+        // Create a falling petal every 400ms
+        setInterval(createFallingPetal, 400);
+    </script>
+
+</body>
+</html>

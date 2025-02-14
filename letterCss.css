@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    max-width: 400px; /* Limits width for phone */
+    margin: auto; /* Centers content */
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    position: relative;
+    padding-bottom: 150px; /* Ensures enough space at the bottom */
+}
+
+/* Ensures the content is scrollable */
+.container {
+    min-height: 150vh; /* Forces scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Title */
+.title {
+    color: #AA336A;
+    text-align: center;
+}
+
+/* Pickup Line */
+.pickupline {
+    text-align: center;
+}
+
+/* Falling Petals Animation */
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0.5; }
+}
+
+.falling-petal {
+    position: fixed; /* Ensures petals fall across screen */
+    top: 0;
+    left: 0;
+    width: 30px; /* Default size */
+    height: auto;
+    animation: fall linear infinite;
+    z-index: 9999; /* Keeps petals above everything */
+}
+
+/* Rizz Picture */
+.rizz-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rizzPic {
+    width: 250px; /* Adjust size */
+    height: auto;
+    position: relative;
+    left: -20px;
+}
+
+/* Video Container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 300px; /* Adjust width */
+    height: 170px; /* Adjust height */
+}
+
+/* Bottom Content (Message + Cat GIF) */
+.bottom-content {
+    width: 100%; /* Ensures full width */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Ensures it doesn't overlap */
+    margin-top: 500px;
+}
+
+.bottom-content p {
+    max-width: 300px; /* Limits width for better readability */
+    text-align: center; /* Centers text */
+    margin: 0 auto;
+}
+
+/* Cat GIF */
+.cat-gif {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.cat-gif img {
+    width: 150px; /* Adjust for mobile */
+    height: auto;
+}
